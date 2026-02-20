@@ -9,7 +9,7 @@ const App = () => {
 
   // Estilos rápidos en objetos para no usar CSS externo
   const styles = {
-    container: { fontFamily: 'sans-serif', textAlign: 'center', padding: '50px' },
+    container: { fontFamily: 'sans-serif', padding: '50px' },
     button: { margin: '10px', padding: '15px 30px', fontSize: '16px', cursor: 'pointer', borderRadius: '8px', border: 'none', backgroundColor: '#007bff', color: 'white' },
     backBtn: { marginTop: '20px', padding: '10px', cursor: 'pointer', background: '#6c757d', color: 'white', border: 'none', borderRadius: '5px' }
   };
