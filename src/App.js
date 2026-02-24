@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 // Asumiendo que tus archivos están en la misma carpeta
 import SQLJunior from './components/SQLJunior';
 import SQLIntermediate from './components/SQLIntermediate';
+import BackendBeginners from './components/BackendBeginners';
+import BackendProgram from './components/BackendProgram';
 
 const App = () => {
   // El estado 'view' nos dirá qué componente mostrar
@@ -32,6 +34,22 @@ const App = () => {
       </div>
     );
   }
+  if (view === 'backendBeginners') {
+    return (
+      <div style={styles.container}>
+        <BackendBeginners />
+        <button style={styles.backBtn} onClick={() => setView('home')}>Volver al Menú</button>
+      </div>
+    );
+  }
+  if (view === 'backendprogram') {
+    return (
+      <div style={styles.container}>
+        <BackendProgram />
+        <button style={styles.backBtn} onClick={() => setView('home')}>Volver al Menú</button>
+      </div>
+    );
+  }
 
   // Vista de Landing Page (Home)
   return (
@@ -45,6 +63,14 @@ const App = () => {
         
         <button style={{ ...styles.button, backgroundColor: '#28a745' }} onClick={() => setView('intermediate')}>
           Ir a SQL Intermediate
+        </button>
+
+        <button style={{ ...styles.button, backgroundColor: '#c3d422' }} onClick={() => setView('backendBeginners')}>
+          Ir a Backend Beginners
+        </button>
+
+        <button style={{ ...styles.button, backgroundColor: '#a77b28' }} onClick={() => setView('backendprogram')}>
+          Ir a Backend Intermediate
         </button>
       </div>
     </div>
